@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring intro - uke 6</title>
+  <!--legger inn jQuery link-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    function hallo() {
+      const url = "/?navn= " + $("#navn").val();
+
+      $.get(url, function(data) {
+        $("#hallo").html(data);
+      })
+    }
+  </script>
+    </head>
+<body>
+  Skriv inn ditt navn: <input type="text" id="navn">
+  <button onclick="hallo();">Trykk meg</button>
+
+  <div id="hallo"></div>
+
+</body>
+</html>
